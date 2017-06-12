@@ -1,0 +1,13 @@
+---
+- name: Playbook for configuring firewall client(s)
+  hosts:  clients
+  tasks:
+    - name: Allow {{ custom_port }}
+      command: firewall-cmd --permanent --add-port={{ custom_port }}/tcp
+      when: skip_client_firewall is undefined
+      notify:
+        - restart firewalld
+
+  handlers:
+    - name: restart firewalld
+      service: name=firewalld state=restarted

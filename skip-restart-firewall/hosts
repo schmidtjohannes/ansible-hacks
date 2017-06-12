@@ -1,0 +1,3 @@
+[linux-clients]
+client1.mycompany.com
+client2.mycompany.com skip_client_firewall
