@@ -8,6 +8,6 @@ To get the port you use
     hostvars[item].ansible_port
 That means although you are in a different host-list of your playbook you can easily access
 
-# skip task by flag
+## skip task by flag
 I needed a possiblity to controll the configuration and restart of a firewall on centos 7
-so I check if a certain flag is present in the variable list of a host, in this case skip_client_firewall
+so I check if a certain flag is defined in the variable list of a host, in this case skip_client_firewall
