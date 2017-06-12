@@ -1,0 +1,9 @@
+---
+- name: Playbook iterate over one host-group and get info from another
+  hosts: nagios-master
+  tasks:
+    - name: show port of host, default 22
+      debug:
+         msg: "{{ hostvars[item].ansible_port | default('22') }}"
+      with_items:
+        - "{{ groups['nagios-linux-clients'] }}"

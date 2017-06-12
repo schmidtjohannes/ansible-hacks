@@ -1,0 +1,5 @@
+[nagios-master]
+nagios.mycompany.com:65223
+[nagios-linux-clients]
+client1.mycompany.com
+client2.mycompany.com:65222
